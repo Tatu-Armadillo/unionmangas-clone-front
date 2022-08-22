@@ -1,4 +1,4 @@
-export enum AgeGroup { 
+export enum AgeGroupEnum { 
     LIVRE = "LIVRE",
     MAIOR_10 = "MAIOR_10",
     MAIOR_12 = "MAIOR_12",

@@ -1,16 +1,17 @@
-import { ISendAuthor, ISendGenre } from "./index"
+import { IAuthor } from "./IAuthor";
+import { IGenre } from "./IGenre";
 
-export interface ISendManga {
+export interface IManga {
     id: number,
     mainTitle: string,
-    alternativeTitle: string,
+    alternativeTitle: string | null,
     linkImage: string,
-    blobImage: Blob,
+    blobImage: Blob | null,
     description: string,
     status: string,
     rating: number,
     releaseDate: Date,
     lastUpdate: Date,
-    authors: ISendAuthor[],
-    genres: ISendGenre[]
+    authors: IAuthor[],
+    genres: IGenre[]
 };

@@ -1,4 +1,4 @@
-export interface ISendChapter {
+export interface IChapter {
     id_chapter: number,
     number_volume: number,
     number_chapter: number,

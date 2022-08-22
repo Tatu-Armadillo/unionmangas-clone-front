@@ -1,8 +1,9 @@
-import { AgeGroup } from "./index";
+import { AgeGroupEnum } from "./Enumerator/ageGroupEnum";
 
-export interface ISendGenre {
+
+export interface IGenre {
     id_genre: number,
-    name: string, 
-    description: string, 
-    age_group: AgeGroup,
+    name: string,
+    description: string,
+    age_group: AgeGroupEnum,
 }
