@@ -1,0 +1,5 @@
+export * from "./IAuthor"
+export * from "./IChapter"
+export * from "./IGenre"
+export * from "./IManga"
+export * from "./Enumerator/ageGroupEnum"
