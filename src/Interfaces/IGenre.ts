@@ -1,4 +1,5 @@
-import { AgeGroupEnum } from "./Enumerator/ageGroupEnum";
+import { AgeGroupEnum } from "./Enumerator";
+
 
 
 export interface IGenre {

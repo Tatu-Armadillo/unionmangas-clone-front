@@ -1,5 +1,4 @@
-import { IAuthor } from "./IAuthor";
-import { IGenre } from "./IGenre";
+import { IAuthor, IGenre } from "./index"
 
 export interface IManga {
     id: number,
