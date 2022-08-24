@@ -3,9 +3,9 @@ import { Nav } from "react-bootstrap"
 import { FaHome } from "@react-icons/all-files/fa/FaHome";
 import { FaNewspaper } from "@react-icons/all-files/fa/FaNewspaper";
 
-const Menu = () => {
+const MenuNavbar = () => {
     return (
-        <>
+        <div>
             <button className="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                 <span className="navbar-toggler-icon"></span>
             </button>
@@ -23,8 +23,8 @@ const Menu = () => {
                     </Nav>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
-export default Menu;
+export default MenuNavbar;
