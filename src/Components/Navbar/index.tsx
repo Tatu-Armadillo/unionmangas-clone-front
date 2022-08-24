@@ -5,7 +5,7 @@ import Menu from "../Menu";
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-dark bg-dark fixed-top">
+        <nav id="Nav-black" className="navbar navbar-dark fixed-top">
             <div className="container">
                 <a className="navbar-brand" href="#">Logo</a>
                 <div className="position-relative">
