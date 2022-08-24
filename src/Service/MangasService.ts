@@ -1,8 +1,11 @@
-import { IManga } from "../Interfaces";
-import { ApiMangas } from "../Providers/Api";
+import { instance } from "../Providers";
 
-const sendManga = (data: IManga) => ApiMangas.post("/mangas", data)
+const getManga = () => instance.get("/mangas", {
+    headers: {
+        "Content-Type": "application/json"
+    }
+})
 
 export const MangasService = {
-    sendManga
+    getManga
 };
