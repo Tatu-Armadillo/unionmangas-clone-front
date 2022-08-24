@@ -1,7 +1,8 @@
-import { ApiMangas } from "../Providers/Api"
+import { IManga } from "../Interfaces";
+import { ApiMangas } from "../Providers/Api";
 
-const sendManga = () => ApiMangas.post("/mangas")
+const sendManga = (data: IManga) => ApiMangas.post("/mangas", data)
 
 export const MangasService = {
     sendManga
-}
+};
