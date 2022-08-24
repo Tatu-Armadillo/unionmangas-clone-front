@@ -1,5 +1,5 @@
-// Components
 import { useEffect, useState } from "react";
+// Components
 import Navbar from "../Components/Navbar/Navbar";
 // Service 
 import { MangasService } from "../Service/MangasService";
