@@ -5,19 +5,15 @@ import Navbar from "../Components/Navbar/Navbar";
 import { MangasService } from "../Service/MangasService";
 
 function Home() {
-  const [mangas, setMangas] = useState([])
+  const [mangas, setMangas] = useState({})
 
   useEffect(() => {
     MangasService.getMangas()
-    .then((response) => {
-        // setMangas(response.data)
-        
-    })
-    .catch((err) => {
-      console.log();
-      
-    })
-  })
+      .then((response) => {
+        setMangas(response.data)
+      })
+  }, [])
+  
   return (
     <div className="App">
       <Navbar />
