@@ -17,15 +17,12 @@ const InputMangas = () => {
 
     return (
         <Form.Select aria-label="Default select example">
-            <option>Open this select menu</option>
+            <option>Selecione um gênero</option>
             {genres.map((genre, key) => {
-                let genreFormat = genre.name;
-                console.log(genreFormat);
-                
+                const genreFormat = genre.name[0].toUpperCase() + genre.name.slice(1).toLowerCase();
                 return (
                     <option key={key} value={genreFormat}>{genreFormat}</option>
                 )
-
             })}
         </Form.Select>
     )
