@@ -1,3 +1,4 @@
+// API
 import { instance } from "../Providers";
 
 const getMangas = () => instance.get("/mangas", {

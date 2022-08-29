@@ -1,1 +1,2 @@
-export * from "./MangasService"
+export * from "./MangasService";
+export * from "./GenreService";
