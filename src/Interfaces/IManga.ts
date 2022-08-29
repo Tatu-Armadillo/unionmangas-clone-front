@@ -1,7 +1,7 @@
 import { IAuthor, IGenre } from "./index"
 
 export interface IManga {
-    id: number,
+    id_manga: number | null,
     mainTitle: string,
     alternativeTitle: string | null,
     linkImage: string,

@@ -1,8 +1,8 @@
 import { AgeGroupEnum } from "./Enumerator";
 
 export interface IGenre {
-    id_genre: number,
+    id_genre: number | null,
     name: string,
-    description: string,
-    age_group: AgeGroupEnum,
+    description: string | null,
+    age_group: AgeGroupEnum | null,
 }
