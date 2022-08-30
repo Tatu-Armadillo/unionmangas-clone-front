@@ -5,30 +5,6 @@ import { GenreService, MangasService } from "../../Service";
 //Interface
 import { IAuthor, IGenre, IManga } from "../../Interfaces";
 
-const authorValue: IAuthor[] = [{
-    id_author: null, pseudonym: "aaaaa", age: 0,
-    name: 'joao', birthdate: new Date('2002-04-26')
-}]
-
-const genreValues: IGenre[] = [
-    { name: 'escolar', age_group: null, description: null, id_genre: null }
-]
-
-const mangaValue: IManga = {
-    mainTitle: 'teste 12121212',
-    alternativeTitle: 'teste 12121212',
-    linkImage: 'https://totemti.atlassian.net/jira/software/c/projects/TGO/boards/169?selectedIssue=TGO-298',
-    description: 'tes',
-    status: 'ATIVO ',
-    rating: 0.0,
-    releaseDate: new Date('2002-04-26'),
-    lastUpdate: new Date('2002-04-26'),
-    genres: genreValues,
-    authors: authorValue,
-
-    blobImage: null,
-    id_manga: null
-}
 
 const InputMangas = () => {
     const [genres, setGenre] = useState<IGenre[]>([]);
@@ -38,6 +14,8 @@ const InputMangas = () => {
         const { name, value } = ev.target;
         setValues({ ...values, [name]: value });
     }
+
+    
 
     useEffect(() => {
         MangasService.postManga(mangaValue)
