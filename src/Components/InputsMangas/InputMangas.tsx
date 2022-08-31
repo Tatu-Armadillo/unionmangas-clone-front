@@ -5,6 +5,29 @@ import { GenreService, MangasService } from "../../Service";
 //Interface
 import { IAuthor, IGenre, IManga } from "../../Interfaces";
 
+const authorValue: IAuthor[] = [{
+    id_author: null, pseudonym: "aaaaa", age: 0,
+    name: 'joao', birthdate: new Date('2002-04-26')
+}]
+
+const genreValues: IGenre[] = [
+    { name: 'escolar', age_group: null, description: null, id_genre: null }
+]
+
+const mangaValue: IManga = {
+    mainTitle: 'teste asdasdasdas',
+    alternativeTitle: 'teste 12121212',
+    linkImage: 'https://totemti.atlassian.net/jira/software/c/projects/TGO/boards/169?selectedIssue=TGO-298',
+    description: 'tes',
+    status: 'ATIVO ',
+    rating: 0,
+    releaseDate: new Date('2002-04-26'),
+    lastUpdate: new Date('2002-04-26'),
+    genres: genreValues,
+    authors: authorValue,
+    blobImage: null,
+    id_manga: null
+}
 
 const InputMangas = () => {
     const [genres, setGenre] = useState<IGenre[]>([]);
@@ -15,11 +38,9 @@ const InputMangas = () => {
         setValues({ ...values, [name]: value });
     }
 
-    
-
-    useEffect(() => {
-        MangasService.postManga(mangaValue)
-    })
+    function onSubmit() {
+        MangasService.postManga(values);
+    }
 
     useEffect(() => {
         GenreService.getGenre()
@@ -30,7 +51,7 @@ const InputMangas = () => {
 
 
     return (
-        <form >
+        <div>
             <div className="mb-3">
                 <label htmlFor="authors" className="form-label">authors</label>
                 <input type="text" name='authors' className="form-control" onChange={onChange} />
@@ -76,8 +97,8 @@ const InputMangas = () => {
                     )
                 })}
             </Form.Select>
-            <button type="submit" className="btn btn-primary">Submit</button>
-        </form>
+            <button type="submit" onClick={() => onSubmit()} className="btn btn-primary">Submit</button>
+        </div>
     )
 }
 
