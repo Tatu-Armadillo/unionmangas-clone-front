@@ -3,5 +3,5 @@ export interface IAuthor {
     name: string,
     pseudonym: string | null,
     age: number | null,
-    birthdate: Date, 
+    birthdate: string | null, 
 }

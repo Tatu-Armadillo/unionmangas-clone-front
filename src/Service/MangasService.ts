@@ -1,5 +1,5 @@
 // API
-import { IManga } from "../Interfaces";
+import { IAuthor, IManga } from "../Interfaces";
 // Interface
 import { instance } from "../Providers";
 
@@ -21,8 +21,15 @@ const postManga = (data: IManga) => instance.post("/mangas", data, {
     }
 })
 
+const postAuthor = (data: IAuthor) => instance.post("/author", data, {
+    headers: {
+        "Content-Type": "application/json"
+    }
+})
+
 export const MangasService = {
     getMangas,
     getMangasWeek,
-    postManga
+    postManga,
+    postAuthor
 };
